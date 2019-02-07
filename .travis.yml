@@ -3,6 +3,12 @@ os: linux
 dist: trusty
 sudo: required
 
+services:
+        - docker
+
+before_install:
+        - echo "Hello, World"
+
 jobs:
         include:
                 - stage: build
