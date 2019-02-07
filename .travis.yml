@@ -1,0 +1,12 @@
+language: c
+os: linux
+dist: trusty
+sudo: required
+
+jobs:
+        include:
+                - stage: build
+                  script: echo "Stage 1" > stage-1
+                  script: echo "Stage 2" > stage-2
+                - stage: boot
+                  script: ls -la
